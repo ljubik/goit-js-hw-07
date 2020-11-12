@@ -26,7 +26,7 @@ const galleryMarkup = images.reduce(
 );
 const galleryList = document.getElementById("gallery");
 galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
-galleryList.setAttribute("style", "list-style-type:none; display: flex;");
+// galleryList.setAttribute("style", "list-style-type:none; display: flex;"); //додавання стилів
 
 // Напиши скрипт для створення галереї зображень по масиву даних.
 // Використовуй масив об'єктів `images` для створення тегів `img` вкладених в `li`.

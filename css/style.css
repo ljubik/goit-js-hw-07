@@ -1,5 +1,6 @@
 #gallery {
   background-color: aquamarine;
+  list-style-type: none;
 }
 img {
   list-style-type: none;
