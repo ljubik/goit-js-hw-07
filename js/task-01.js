@@ -6,6 +6,7 @@ const listUl = Array.from(
   );
 
 console.log(`У списку ${listUl.length} категорії`);
+
 const categoriesList = Array.from(
     document.querySelectorAll("ul#categories li.item ul")
   );
