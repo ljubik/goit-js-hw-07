@@ -1,0 +1,7 @@
+#gallery {
+  background-color: aquamarine;
+}
+img {
+  list-style-type: none;
+  display: flex;
+}
