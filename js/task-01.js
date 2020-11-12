@@ -5,20 +5,14 @@ const listUl = Array.from(
     document.querySelectorAll("ul#categories>li.item")
   );
 
+console.log(`У списку ${listUl.length} категорії`);
+const categoriesList = Array.from(
+    document.querySelectorAll("ul#categories li.item ul")
+  );
 
-// console.log(listUl.length);
-
-
-// Напиши скрипт, який виконає наступні операції.
-
-// Порахує і виведе в консоль кількість категорій в `ul#categories`, тобто
-// елементів `li.item`. Вийде `'У списку 3 категорії.'`.
-
-// Для кожного елемента `li.item` в списку `ul#categories`, знайде і виведе в
-// консоль текст заголовка елемента (тега h2) і кількість елементів в категорії
-// (всіх вкладених в нього елементів `li`).
-
-// Наприклад, для першої категорії вийде:
-
-// - Категорія: Тварини
-// - Кількість елементів: 4
+const listItems = document.querySelectorAll('.item');
+Array.prototype.forEach.call(listItems, (element) => {
+    const title = element.querySelector('h2').innerHTML;
+    const itemsLength = element.querySelectorAll('li').length;
+    console.log(`- Категорія: ${title} \n- Кількість елементів: ${itemsLength}`);
+});
