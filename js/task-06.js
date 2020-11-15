@@ -1,27 +1,18 @@
-// ## Завдання 6
+// // ## Завдання 6
 'use strict';
 
-let inputVal = document.getElementById("validation-input");
+let inputVal = document.getElementById('validation-input');
 
-let totalLenght = inputVal.getAttribute("data-length");
+let totalLenght = inputVal.getAttribute('data-length');
 
-let intTotallenght = parseInt(totalLenght, 10);
+let intTotallenght = Number(totalLenght);
 
-inputVal.oninput = function() {
-  if (inputVal.value.length === intTotallenght) {
-    inputVal.classList.remove("invalid");
-    inputVal.classList.add("valid");
-  }
-  
-  if (inputVal.value.length === 0) {
-    inputVal.classList.remove("valid");
-    inputVal.classList.remove("invalid");
-  }
+inputVal.addEventListener('blur', handleInput);
 
-  if (inputVal.value.length !== intTotallenght && inputVal.value.length !== 0) {
-    inputVal.classList.add("invalid");
-  }
-};
-
-
+function handleInput(ev) {
+  let userText = ev.target.value;
+  return userText.length === intTotallenght
+    ? inputVal.classList.add('valid')
+    : inputVal.classList.add('invalid');
+}
 
