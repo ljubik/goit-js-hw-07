@@ -10,6 +10,10 @@ nameInput.oninput = function () {
     } else{
         nameOutput.innerHTML = nameInput.value;
     }
+        if (nameInput.value === ' '){
+            let space = '&nbsp;'
+            nameOutput.innerHTML = nameInput.value + space
+    }
 }
 
 
