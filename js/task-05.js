@@ -3,6 +3,7 @@
 
 let nameInput = document.getElementById("name-input");
 let nameOutput = document.getElementById("name-output");
+// nameInput.addEventListener("change")
 
 nameInput.oninput = function () {
     if (nameInput.value === '') {
@@ -12,7 +13,7 @@ nameInput.oninput = function () {
     }
         if (nameInput.value === ' '){
             let space = '&nbsp;'
-            nameOutput.innerHTML = nameInput.value + space
+            nameOutput.innerHTML = nameInput.value
     }
 }
 
